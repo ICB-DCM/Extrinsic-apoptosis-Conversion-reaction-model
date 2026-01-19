@@ -11,10 +11,10 @@ Required MathWorks toolboxes: Optimization, Statistics
 ### Dependencies
 
 The reproducible code depends on MATLAB toolboxes, which you can find in the folder "./toolboxes":
-* **AMICI: ** MATLAB and C++ interface for the SUNDIALS solvers CVODES (for ordinary differential equations) and IDAS (for algebraic differential equations).
-* **MEMOIR: ** MATLAB toolbox for Mixed Effect Model InfeRence.
-* **PESTO: ** Parameter EStimation TOolbox.
-* **SPToolbox: ** MATLAB toolbox allows for different Dirac mixture distribution methods to approximate Gaussian distributions.
+* **AMICI:** MATLAB and C++ interface for the SUNDIALS solvers CVODES (for ordinary differential equations) and IDAS (for algebraic differential equations).
+* **MEMOIR:** MATLAB toolbox for Mixed Effect Model InfeRence.
+* **PESTO:** Parameter EStimation TOolbox.
+* **SPToolbox:** MATLAB toolbox allows for different Dirac mixture distribution methods to approximate Gaussian distributions.
 
 ### Setup
 
