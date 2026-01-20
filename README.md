@@ -5,7 +5,7 @@ This repository provides the reproducible code accompanying the manuscript "Nonl
 <img src="./img/conception.png"  />
 
 ### Requirements
-MATLAB version tested : R2017b
+MATLAB version tested : R2017a and R2017b
 Required MathWorks toolboxes: Optimization, Statistics
 
 ### Dependencies
@@ -17,6 +17,16 @@ The reproducible code depends on MATLAB toolboxes, which you can find in the fol
 * **SPToolbox:** MATLAB toolbox allows for different Dirac mixture distribution methods to approximate Gaussian distributions.
 
 ### Setup
+
+You can either clone the Extrinsic-apoptosis-Conversion-reaction-model repository via git clone git@github.com:ICB-DCM/Extrinsic-apoptosis-Conversion-reaction-model.git, or download the repository. 
+
+For reproducing codes in the manuscript, you would first need to add the toolboxes to the MATLAB search path:
+```shell
+addpath(genpath('./toolboxes/AMICI'))
+addpath(genpath('./toolboxes/MEMOIR'))
+addpath(genpath('./toolboxes/PESTO'))
+addpath(genpath('./toolboxes/SPToolbox'))
+```
 
 
 ### Reproducing the manuscript results
