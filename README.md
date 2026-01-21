@@ -22,8 +22,8 @@ You can either clone the Extrinsic-apoptosis-Conversion-reaction-model repositor
 
 Add the toolboxes to the MATLAB search path:
 ```shell
-addpath(genpath('./toolboxes/AMICI'))
 addpath(genpath('./toolboxes/MEMOIR'))
+addpath(genpath('./toolboxes/AMICI'))
 addpath(genpath('./toolboxes/PESTO'))
 addpath(genpath('./toolboxes/SPToolbox'))
 ```
@@ -214,10 +214,9 @@ The repository contains two main folders, conversion_reaction_model and extrinsi
 \---singleCellParameters
 
 **toolboxes**
++---MEMOIR
 
 +---AMICI
-
-+---MEMOIR
 
 +---PESTO
 
