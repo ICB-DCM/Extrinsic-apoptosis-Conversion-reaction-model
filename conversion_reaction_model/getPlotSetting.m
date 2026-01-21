@@ -1,4 +1,4 @@
-function [par, Data, Model, options, optionmu, foldername, parameters] = getPlotSetting(s)
+function [par, Data, Model, options, optionmu, foldername, parameters] = getPlotSetting(scenario)
 %% string of used dataset
 %% folder and files to load
     switch(scenario)

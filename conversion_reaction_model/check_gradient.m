@@ -1,6 +1,6 @@
 function check_gradient(s)
 %% addpath
-    addpath(genpath('../toolbox/MEMOIR/models'))
+    addpath(genpath('../toolboxes/MEMOIR/models'))
     addpath(genpath('project/models'))
     
 %% load data and model
