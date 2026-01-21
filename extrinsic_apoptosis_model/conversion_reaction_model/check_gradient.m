@@ -1,6 +1,6 @@
-function check_gradient(s)
+function check_gradient(s, num_cell)
 %% addpath
-    addpath(genpath('../toolbox/MEMOIR/models'))
+%     addpath(genpath('../matlab_toolbox/MEMOIR/models'))
     addpath(genpath('project/models'))
     
 %% load data and model

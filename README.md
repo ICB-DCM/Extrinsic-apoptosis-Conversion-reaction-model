@@ -53,6 +53,42 @@ where, scenario (1, 2, 3, 4, 5, 6) is a number represent the different scenarios
 
 **Reproducing result analysis only**
 
+As the parameter estimation process is time consuming, if you want to only redo the analysis part in the manuscript , please first download the estimated results (from zenodo: https://doi.org/10.5281/zenodo.18028185) . Then copy the folders in "results_for_manuscript/optimized_parameters" to the foder "conversion_reaction_model" or "extrinsic_apoptosis_model" correspondingly.
+
+Simulated results used for Figure 5 and Figure 6 can be found in "results_for_manuscript/simulated_data_using_optimized_parameters"
+
+- Comparison of sigma point and Monte Carlo sampling method
+```shell
+generate_SP_approximation(nsamples, approx)
+generate_SPcomparison
+```
+where nsamples is the number of Monte Carlo sampling method, in the manuscript we used 100, 1000, 10000, 50000, 100000, 1000000. approx is a str represent the method used for computation, in the manuscript we used 'SP' and 'samples'. The results computed for the manuscript is in "results_for_manuscript/comparison_SP_MC".
+
+- Gradient analysis
+```shell
+check_gradient(s)
+gradient_computation_time(s, step_size)
+```
+where i is the number of scenario and step_size is the step size used for finite difference method. The results computed for the manuscript is in "results_for_manuscript/check_gradient".
+
+- Single cell parameters
+```shell
+getSingleCellPar(scenario)
+```
+where scenario is the number of scenario. The results computed for the manuscript is in "results_for_manuscript/scenario1_singleCellParameters".
+
+- Inner optimization
+```shell
+inner_optimization(dataset, i_cell)
+```
+where dataset is an int between 1-8, representing the index of single-cell time-lapse data. i_cell is an int representing the index of cell, which is 1-30 for dataset 1-4, and 1-10 for dataset 5-8. The results computed for the manuscript is in "results_for_manuscript/inner_optimization".
+
+- Hession computation
+```shell
+getHessianOpt(scenario, k)
+```
+where scenario is the number scenario and k is the index of parameter (1-35) used for Hession computation. The results computed for the manuscript is in "results_for_manuscript/optimized_parameters".
+
 ### Project structure
 
 The repository contains two main folders, conversion_reaction_model and extrinsic_apoptosis_model for the two models used in the manuscript, toolbox folder for MATLAB toolboxes used in this project and img folder contains the main image. The main model folders have similar structures including models, data and scripts for parameter estimation and data analysis. More details can be found in the file "file_info.txt".

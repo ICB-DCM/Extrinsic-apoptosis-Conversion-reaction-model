@@ -1,8 +1,8 @@
 function check_gradient(s)
 % s, index of datasets
 %% addpath
-%     addpath(genpath('../matlab_toolbox/MEMOIR/models'))
-%     addpath(genpath('project/models'))
+    addpath(genpath('../toolboxes/MEMOIR/models'))
+    addpath(genpath('project/models'))
     
 %% load data and model
     s_str = num2str(s);

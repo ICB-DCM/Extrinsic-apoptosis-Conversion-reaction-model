@@ -1,10 +1,9 @@
 function gradient_computation_time(s)
 %% this is a function to get the computation time for gradient computation. In the manuscript we compute the gradient for each dataset using the optimized parameters for scenario 1.
 %% addpath
-%     addpath(genpath('../matlab_toolbox/MEMOIR/models'))
-%     addpath(genpath('project/models'))
-%     addpath(genpath('gridtool'))
-    
+    addpath(genpath('../toolboxes/MEMOIR/models'))
+    addpath(genpath('project/models'))
+
 %% load data and model
     s_str = num2str(s);
     [par, Data, Model, ~, ~, ~, ~] = getPlotSetting(1);

@@ -1,7 +1,7 @@
-function getHessianOpt_k(scenario, k)
+function getHessianOpt(scenario, k)
    %% k index of parameter
-   %% addpath(genpath('../matlab_toolbox/MEMOIR/models'))
-   %% addpath(genpath('project/models'))
+   addpath(genpath('../toolboxes/MEMOIR/models'))
+   addpath(genpath('project/models'))
     
     k_str = num2str(k);
     [par, Data, Model, ~, ~, foldername, parameters] = getPlotSetting(scenario);

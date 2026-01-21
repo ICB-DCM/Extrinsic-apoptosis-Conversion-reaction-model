@@ -1,22 +1,22 @@
-function inner_optimization(i_model, i_cell)
+function inner_optimization(dataset, i_cell)
 %% i_model index of dataset 1-8
 %% i_cell index of cell in the dataset, 1-30 for dataset 1-4 and 1-10 for dataset 5-8.
-%%addpath(genpath('../matlab_toolbox/MEMOIR/models'))
+addpath(genpath('../toolboxes/MEMOIR/models'))
 addpath(genpath('project/models'))
 
 warning off
 rng(0);
-str_model = num2str(i_model);
+str_model = num2str(dataset);
 str_cell = num2str(i_cell);
-filename = ['inner_optimization_par0_1_dataset_' str_model '_cell_' str_cell];
+filename = ['dataset_' str_model '_cell_' str_cell];
 %% load model and data files
 modelfile = ['ExpModel.mat'];
 datafile = ['ExpDatamat'];
 load(modelfile)
 load(datafile)
 %i_model = 1;
-model = Model.exp{i_model};
-data = Data{i_model};
+model = Model.exp{dataset};
+data = Data{dataset};
 
 %% estimated parameters
 len_par = 8;
@@ -113,7 +113,7 @@ options.obj_type = 'negative log-posterior';
 
 
 %% multistarts
-parameters_inner = getMultiStarts(parameters_inner,@(b) objective_SCTL_s1(model,data,beta,b,delta,i_model,i_cell,options_logL,2),options);
+parameters_inner = getMultiStarts(parameters_inner,@(b) objective_SCTL_s1(model,data,beta,b,delta,dataset,i_cell,options_logL,2),options);
 
 disp('now exiting')
 exit;

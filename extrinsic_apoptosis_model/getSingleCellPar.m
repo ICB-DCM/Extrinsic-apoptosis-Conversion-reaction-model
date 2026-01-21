@@ -2,9 +2,6 @@ function getSingleCellPar(scenario)
 % this is a function to plot the fitting of single cells using estimated parameters, in this manuscript, we computed the single cell script for only scenario 1, but you can do it also for other scienarios using this script.
 % scenario: int, scenario number according to the manuscript
 % bound: boundary used for fitting
-%        0 for same boundary
-%        'orgB' for original boundary used by Fabi
-%        'new' for new boundary provided by Stefan
 %% number of simulated single cells
 num_samples = 1000;
 %% get settings
