@@ -1,6 +1,6 @@
-function optimize_caspase8(scenario,k,int,sctlscale)
+function optimize_caspase8(scenario,k)
 %% add path
-    addpath(genpath('../matlab_toolbox/MEMOIR/models'))
+    addpath(genpath('../toolboxes/MEMOIR/models'))
     addpath(genpath('project/models'))    
     warning off
     
@@ -9,9 +9,9 @@ function optimize_caspase8(scenario,k,int,sctlscale)
     %% General options
     
     % int -> model integration
-    int = logical(int);
+    int = 1;
     % sctl -> single cell time lapse
-    sctlscale_str = num2str(sctlscale);
+    sctlscale = 1;
     % S_str -> experimental index
     
     switch(scenario)

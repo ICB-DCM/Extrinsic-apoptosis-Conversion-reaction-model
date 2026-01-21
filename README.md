@@ -6,7 +6,7 @@ This repository provides the reproducible code accompanying the manuscript "Nonl
 
 ### Requirements
 MATLAB version tested : R2017a and R2017b
-Required MathWorks toolboxes: Optimization, Statistics
+Required MathWorks toolboxes: Optimization, Statistics, Symbolic Math Toolbox
 
 ### Dependencies
 
@@ -28,9 +28,36 @@ addpath(genpath('./toolboxes/PESTO'))
 addpath(genpath('./toolboxes/SPToolbox'))
 ```
 
+### Reproducing the manuscript results
+As the two model folders have similar structures (see **Project structure** part for details). Here we take the conversion reaction model as example.
+**Reproducing parameter estimation**
+
+- Compile model
+```shell
+cd conversion_reaction_model\project\models\
+compileModels
+```
+
+- Generate model files
+```shell
+cd conversion_reaction_model\
+generateModelFiles
+```
+
+- Parameter estimation
+```shell
+cd conversion_reaction_model\
+optimize_conversion(scenario,k)
+```
+where, scenario (1, 2, 3, 4, 5, 6) is a number represent the different scenarios in the manuscript. k is the index number of the different multi-starts. In the manuscript, we used 1-100 for conversion reaction model and 1-550 for the extrinsic apoptosis model.
+
+**Reproducing result analysis only**
+
 ### Project structure
 
-conversion_reaction_model
+The repository contains two main folders, conversion_reaction_model and extrinsic_apoptosis_model for the two models used in the manuscript, toolbox folder for MATLAB toolboxes used in this project and img folder contains the main image. The main model folders have similar structures including models, data and scripts for parameter estimation and data analysis. More details can be found in the file "file_info.txt".
+
+**conversion_reaction_model**
 
 |   check_gradient.m
 
@@ -82,7 +109,7 @@ conversion_reaction_model
 
 \---singleCellParameters
 
-extrinsic_apoptosis_model
+**extrinsic_apoptosis_model**
 
 |   check_gradient.m
 
@@ -150,7 +177,7 @@ extrinsic_apoptosis_model
 
 \---singleCellParameters
 
-toolboxes
+**toolboxes**
 
 +---AMICI
 
@@ -159,19 +186,6 @@ toolboxes
 +---PESTO
 
 +---SPToolbox
-
-
-### Reproducing the manuscript results
-**Reproducing parameter estimation**
-
-**Reproducing result analysis only**
-
-
-### Input description
-
-### Output description
-
-### Troubleshooting
 
 ### License
 

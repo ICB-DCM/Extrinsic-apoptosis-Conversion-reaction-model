@@ -1,7 +1,7 @@
-function optimize_conversion(scenario,k,int,sctlscale)
+function optimize_conversion(scenario,k)
 %% add path
-%     addpath(genpath('../../matlab_toolbox/MEMOIR/models'))
-%     addpath(genpath('conversion_model'))
+     addpath(genpath('../toolboxes/MEMOIR/models'))
+     addpath(genpath('project/models'))
 warning off
     
     rng(0); % sets seed for data simulation
@@ -9,9 +9,9 @@ warning off
     %% General options
     
     % int -> model integration
-    int = logical(int);
+    int = 1;
     % sctl -> single cell time lapse
-    sctlscale_str = num2str(sctlscale);
+    sctlscale = 1;
     % S_str -> experimental index
     
     switch(scenario)

@@ -1,11 +1,8 @@
 clear
 close all
 
-% addpath(genpath('../matlab_toolbox/MEMOIR'))
-% addpath(genpath('../matlab_toolbox/AMICI'))
-% addpath(genpath('../matlab_toolbox/PESTO'))
-% addpath(genpath('project/models'))
-% addpath(genpath('project'))
+addpath(genpath('project/models'))
+addpath(genpath('project'))
     
     %% General options
     

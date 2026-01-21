@@ -1,10 +1,7 @@
 clear
 close all
-% 
-% addpath(genpath('../../matlab_toolbox/MEMOIR'))
-% addpath(genpath('../../matlab_toolbox/AMICI'))
-% addpath(genpath('../../matlab_toolbox/PESTO'))
-% addpath(genpath('conversion_model'))
+addpath(genpath('project'))
+addpath(genpath('project/models'))
     
 %% General options
 
@@ -16,8 +13,7 @@ experiment_fun = @(Model,S) syn_conversion(Model,S);
 
 %% Definition of mixed-effect model
 logbeta = log([0.6; 0.2; 2.5; 1.8]);                                           
-% diagonal of covariance matrix, random effects for:
-% CD95_0A CD95_0H FADD_0 p55_0 BID_0 PrERF1_0A PrERF1_0H PrNESF2_0A PrNESF2_0H volume_0 tBID_tapt
+% diagonal of covariance matrix
 logdelta = log([sqrt(0.1); sqrt(0.1); sqrt(0.1)]);%Ds, x0 Vc tBID_thd
 logsigma = [];
 xi = [logbeta;logdelta,logsigma];

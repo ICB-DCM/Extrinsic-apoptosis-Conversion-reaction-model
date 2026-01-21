@@ -1,4 +1,4 @@
-function [Model,parameters] = model_C8S_diag(xi)
+function [Model,parameters] = model_caspase8_diag(xi)
     
     % Parameter mixture
    
