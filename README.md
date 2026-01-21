@@ -31,71 +31,133 @@ addpath(genpath('./toolboxes/SPToolbox'))
 ### Project structure
 
 conversion_reaction_model
+
 |   check_gradient.m
+
 |   generateDataFiles.m
+
 |   generateModelFiles.m
+
 |   generate_artificial_PAdata.m
+
 |   generate_artificial_SCTLdata.m
+
 |   generate_SPcomparison.m
+
 |   generate_SP_approximation.m
+
 |   getPlotSetting.m
+
 |   gradient_computation_time.m
+
 |   optimize_conversion.m
+
 |   PA_syn.mat
+
 |   SCTL_syn.mat
+
 |   SynData.mat
+
 |   
+
 +---check_gradient
+
 +---project
+
 |   |   model_conversion.m
+
 |   |   syn_conversion.m
+
 |   |   
+
 |   \---models
+
 |           compileModels.m
+
 |           conversion_PA_sym.m
+
 |           conversion_SCTL_sym.m
+
 |           
+
 \---singleCellParameters
 
 extrinsic_apoptosis_model
+
 |   check_gradient.m
+
 |   ExpData.mat
+
 |   ExpModel.mat
+
 |   generateModelFiles.m
+
 |   generate_SPcomparison.m
+
 |   generate_SP_approximation.m
+
 |   getHessianOpt.m
+
 |   getPlotSetting.m
+
 |   getSCTLSetting.m
+
 |   getSingleCellPar.m
+
 |   gradient_computation_time.m
+
 |   inner_optimization.m
+
 |   model_output_SP.m
+
 |   optimize_C8S.m
+
 |   PAt0_C8_post_processing.m
-|   PA_C8_post_processing.m,
+
+|   PA_C8_post_processing.m
+
 |   
+
 +---check_gradient
+
 +---project
+
 |   |   experiments_caspase8.m
+
 |   |   model_caspase8_diag.m
+
 |   |   
+
 |   \---models
+
 |           compileModels.m
+
 |           model_C8S_A_FACS_syms.m
+
 |           model_C8S_A_PAt0_syms.m
+
 |           model_C8S_A_PA_syms.m
+
 |           model_C8S_A_syms.m
+
 |           model_C8S_H_FACS_syms.m
+
 |           model_C8S_H_PAt0_syms.m
+
 |           model_C8S_H_syms.m
+
 |           
+
 \---singleCellParameters
 
 toolboxes
+
 +---AMICI
+
 +---MEMOIR
+
 +---PESTO
+
 +---SPToolbox
 
 
