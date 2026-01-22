@@ -6,6 +6,7 @@ This repository provides the reproducible code accompanying the manuscript "Nonl
 
 ### Requirements
 **MATLAB version tested** : R2017a and R2017b
+
 **Required MathWorks toolboxes**: 
 - Optimization
 
@@ -40,19 +41,19 @@ Both model folders (`conversion_reaction_model` and `extrinsic_apoptosis_model`)
 
 - Compile model
 ```shell
-cd conversion_reaction_model\project\models\
+cd conversion_reaction_model/project/models/
 compileModels
 ```
 
 - Generate model files
 ```shell
-cd conversion_reaction_model\
+cd conversion_reaction_model/
 generateModelFiles
 ```
 
 - Parameter estimation
 ```shell
-cd conversion_reaction_model\
+cd conversion_reaction_model/
 optimize_conversion(scenario,k)
 ```
 where, scenario (1, 2, 3, 4, 5, 6) is a number represent the different scenarios in the manuscript. k is the index number of the different multi-starts. In the manuscript, we used 1-100 for conversion reaction model and 1-550 for the extrinsic apoptosis model.
