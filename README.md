@@ -1,16 +1,21 @@
 # Extrinsic apoptosis & Conversion reaction model
 
-This repository provides the reproducible code accompanying the manuscript "Nonlinear Mixed-Effect Models and Tailored Parameterization Schemes Enable Integration of Single-Cell and Bulk Data," encompassing both the extrinsic apoptosis and conversion reaction models.
+This repository provides the reproducible code accompanying the manuscript "Nonlinear Mixed-Effect Models and Tailored Parameterization Schemes Enable Integration of Single-Cell and Bulk Data". The repository contains implementations for both the extrinsic apoptosis model and the conversion reaction model used in the study.
 
 <img src="./img/conception.png"  />
 
 ### Requirements
 MATLAB version tested : R2017a and R2017b
-Required MathWorks toolboxes: Optimization, Statistics, Symbolic Math Toolbox
+* Required MathWorks toolboxes: 
+- Optimization
+
+- Statistics
+
+- Symbolic Math Toolbox
 
 ### Dependencies
 
-The reproducible code depends on MATLAB toolboxes, which you can find in the folder "./toolboxes":
+TThis project utilizes several MATLAB toolboxes available in the `./toolboxes` directory:
 * **AMICI:** MATLAB and C++ interface for the SUNDIALS solvers CVODES (for ordinary differential equations) and IDAS (for algebraic differential equations).
 * **MEMOIR:** MATLAB toolbox for Mixed Effect Model InfeRence.
 * **PESTO:** Parameter EStimation TOolbox.
@@ -20,7 +25,7 @@ The reproducible code depends on MATLAB toolboxes, which you can find in the fol
 
 You can either clone the Extrinsic-apoptosis-Conversion-reaction-model repository via git clone git@github.com:ICB-DCM/Extrinsic-apoptosis-Conversion-reaction-model.git, or download the repository. 
 
-Add the toolboxes to the MATLAB search path:
+Add all required toolboxes to your MATLAB search path:
 ```shell
 addpath(genpath('./toolboxes/MEMOIR'))
 addpath(genpath('./toolboxes/AMICI'))
@@ -29,7 +34,7 @@ addpath(genpath('./toolboxes/SPToolbox'))
 ```
 
 ### Reproducing the manuscript results
-As the two model folders have similar structures (see **Project structure** part for details). Here we take the conversion reaction model as example.
+Both model folders (`conversion_reaction_model` and `extrinsic_apoptosis_model`) follow similar structures (see **Project structure** part for details). Below we demonstrate the workflow using the conversion reaction model as an example.
 **Reproducing parameter estimation**
 
 - Compile model
@@ -51,9 +56,9 @@ optimize_conversion(scenario,k)
 ```
 where, scenario (1, 2, 3, 4, 5, 6) is a number represent the different scenarios in the manuscript. k is the index number of the different multi-starts. In the manuscript, we used 1-100 for conversion reaction model and 1-550 for the extrinsic apoptosis model.
 
-**Reproducing result analysis only**
+**Analysis Only (Using Pre-computed Results)**
 
-As the parameter estimation process is time consuming, if you want to only redo the analysis part in the manuscript , please first download the estimated results (from zenodo: https://doi.org/10.5281/zenodo.18028185) . Then copy the folders in "results_for_manuscript/optimized_parameters" to the foder "conversion_reaction_model" or "extrinsic_apoptosis_model" correspondingly.
+Since parameter estimation can be computationally intensive, pre-computed results are available for analysis. Please first download the estimated results (from zenodo: https://doi.org/10.5281/zenodo.18028185) . Then copy the folders in "results_for_manuscript/optimized_parameters" to the foder `conversion_reaction_model` or `extrinsic_apoptosis_model` correspondingly.
 
 Simulated results used for Figure 5 and Figure 6 can be found in "results_for_manuscript/simulated_data_using_optimized_parameters"
 
