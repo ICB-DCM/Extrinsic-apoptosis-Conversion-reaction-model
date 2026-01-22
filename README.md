@@ -5,8 +5,8 @@ This repository provides the reproducible code accompanying the manuscript "Nonl
 <img src="./img/conception.png"  />
 
 ### Requirements
-MATLAB version tested : R2017a and R2017b
-* Required MathWorks toolboxes: 
+**MATLAB version tested** : R2017a and R2017b
+**Required MathWorks toolboxes**: 
 - Optimization
 
 - Statistics
@@ -23,7 +23,7 @@ TThis project utilizes several MATLAB toolboxes available in the `./toolboxes` d
 
 ### Setup
 
-You can either clone the Extrinsic-apoptosis-Conversion-reaction-model repository via git clone git@github.com:ICB-DCM/Extrinsic-apoptosis-Conversion-reaction-model.git, or download the repository. 
+You can either clone the Extrinsic-apoptosis-Conversion-reaction-model repository via ``git clone git@github.com:ICB-DCM/Extrinsic-apoptosis-Conversion-reaction-model.git``, or download the repository. 
 
 Add all required toolboxes to your MATLAB search path:
 ```shell
@@ -35,6 +35,7 @@ addpath(genpath('./toolboxes/SPToolbox'))
 
 ### Reproducing the manuscript results
 Both model folders (`conversion_reaction_model` and `extrinsic_apoptosis_model`) follow similar structures (see **Project structure** part for details). Below we demonstrate the workflow using the conversion reaction model as an example.
+
 **Reproducing parameter estimation**
 
 - Compile model
